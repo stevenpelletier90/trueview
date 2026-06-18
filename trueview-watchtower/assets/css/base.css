@@ -1,0 +1,254 @@
+/* =========================================================
+   Base — design tokens, resets, globals, shared primitives.
+   Loaded on every page (before the part/page stylesheets).
+   ========================================================= */
+
+:root {
+  /* Brand */
+  --tv-cyan: #08a6cf;
+  --tv-cyan-bright: #18c6ed;
+  --tv-navy: #15314f;
+  --tv-navy-dark: #0e2740;
+
+  /* Ink / text on light */
+  --tv-ink: #15314f;
+  --tv-ink-600: #3a5266;
+  --tv-ink-500: #5a7184;
+  --tv-ink-400: #7c8b98;
+  --tv-ink-300: #9aaab6;
+
+  /* Text on navy */
+  --tv-on-navy: #a9bece;
+  --tv-on-navy-soft: #cddbe6;
+  --tv-footer-text: #8aa0b2;
+  --tv-footer-text-soft: #c7d5e1;
+  --tv-footer-label: #5e789a;
+  --tv-footer-copy: #6e869b;
+
+  /* Status */
+  --tv-green: #19c28e;
+  --tv-green-dark: #19a37a;
+
+  /* Surfaces */
+  --tv-surface: #fff;
+  --tv-surface-alt: #f4f8fa;
+  --tv-map: #dce6ec;
+  --tv-map-line: #cbd9e1;
+
+  /* Borders */
+  --tv-border: #eaf0f4;
+  --tv-border-header: #e9eff3;
+  --tv-border-input: #d7e0e7;
+  --tv-border-pill: #e2eaf1;
+
+  /* Type */
+  --tv-font-display: "Space Grotesk", sans-serif;
+  --tv-font-body: "IBM Plex Sans", sans-serif;
+  --tv-font-mono: "IBM Plex Mono", monospace;
+
+  /* Layout */
+  --tv-container: 1200px;
+  --tv-gutter: clamp(18px, 4vw, 48px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--tv-font-body);
+  color: var(--tv-ink);
+  background: var(--tv-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Form fields (Contact page) */
+::placeholder {
+  color: var(--tv-ink-300);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--tv-cyan) !important;
+  box-shadow: 0 0 0 3px rgb(8 166 207 / 14%);
+}
+
+/* ---------- Shared layout ---------- */
+.tv-container {
+  max-width: var(--tv-container);
+  margin: 0 auto;
+}
+
+.tv-section {
+  padding: clamp(48px, 6vw, 96px) var(--tv-gutter);
+}
+
+.tv-section--alt {
+  background: var(--tv-surface-alt);
+}
+
+/* ---------- Shared type ---------- */
+.tv-eyebrow {
+  margin: 0 0 12px;
+  font-family: var(--tv-font-mono);
+  font-size: 12px;
+  color: var(--tv-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.tv-eyebrow--lg {
+  letter-spacing: 0.24em;
+}
+
+.tv-eyebrow--bright {
+  color: var(--tv-cyan-bright);
+}
+
+.tv-h2 {
+  margin: 0;
+  font-family: var(--tv-font-display);
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+/* ---------- Buttons ---------- */
+.tv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 26px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 9px;
+}
+
+.tv-btn--primary {
+  color: #fff;
+  background: var(--tv-cyan);
+  box-shadow: 0 8px 20px rgb(8 166 207 / 30%);
+}
+
+.tv-btn--ghost {
+  color: var(--tv-navy);
+  background: var(--tv-surface);
+  border: 1.5px solid var(--tv-border-input);
+}
+
+.tv-btn--block {
+  width: 100%;
+}
+
+/* ---------- Pills / badges ---------- */
+.tv-pill {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 10px 18px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--tv-ink);
+  background: var(--tv-surface);
+  border: 1px solid var(--tv-border-pill);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgb(21 49 79 / 5%);
+}
+
+.tv-pill__check {
+  fill: none;
+  stroke: var(--tv-cyan);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Status dot ---------- */
+.tv-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tv-dot--green {
+  background: var(--tv-green);
+}
+
+.tv-dot--cyan {
+  background: var(--tv-cyan-bright);
+}
+
+/* ---------- Generic page content (page.php / index.php) ---------- */
+.tv-content {
+  max-width: 820px;
+  padding: clamp(40px, 6vw, 88px) var(--tv-gutter);
+  margin: 0 auto;
+}
+
+.tv-content__title {
+  margin: 0 0 24px;
+  font-family: var(--tv-font-display);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.tv-content__body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--tv-ink-600);
+}
+
+.tv-post {
+  margin-bottom: 48px;
+}
+
+.tv-post__title {
+  margin: 0 0 14px;
+  font-family: var(--tv-font-display);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.tv-post__title a {
+  color: var(--tv-ink);
+  text-decoration: none;
+}
+
+.tv-post__excerpt {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--tv-ink-600);
+}
+
+.tv-link {
+  font-weight: 600;
+  color: var(--tv-cyan);
+}
+
+.tv-pagination {
+  margin-top: 32px;
+}

@@ -1,0 +1,15 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# WordPress coding standards require tab indentation in PHP (phpcs enforces
+# it); indent_size sets the tab display width.
+[*.php]
+indent_style = tab
+indent_size = 4

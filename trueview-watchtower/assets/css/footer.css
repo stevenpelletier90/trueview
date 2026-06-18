@@ -1,0 +1,92 @@
+/* =========================================================
+   Footer — dark site footer.
+   ========================================================= */
+
+.tv-footer {
+  padding: clamp(40px, 5vw, 68px) var(--tv-gutter) 32px;
+  background: var(--tv-navy-dark);
+}
+
+.tv-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.tv-footer__brand {
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+
+.tv-footer__logo {
+  display: inline-flex;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.tv-footer__logo-img {
+  display: block;
+  height: 24px;
+}
+
+.tv-footer__desc {
+  max-width: 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--tv-footer-text);
+}
+
+.tv-footer__col {
+  flex: 0 1 auto;
+}
+
+.tv-footer__label {
+  margin-bottom: 14px;
+  font-family: var(--tv-font-mono);
+  font-size: 11px;
+  color: var(--tv-footer-label);
+  letter-spacing: 0.2em;
+}
+
+.tv-footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--tv-footer-text-soft);
+}
+
+.tv-footer__list--addr {
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.tv-footer__phone {
+  font-family: var(--tv-font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tv-footer__email {
+  color: var(--tv-footer-text-soft);
+  text-decoration: none;
+}
+
+.tv-footer__muted {
+  color: var(--tv-footer-text);
+}
+
+.tv-footer__copy {
+  padding-top: 22px;
+  font-size: 13px;
+  color: var(--tv-footer-copy);
+}

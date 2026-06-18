@@ -1,0 +1,103 @@
+/* =========================================================
+   Header — sticky site header with page-aware nav.
+   ========================================================= */
+
+.tv-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(255 255 255 / 92%);
+  border-bottom: 1px solid var(--tv-border-header);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.tv-header__inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--tv-container);
+  padding: 14px var(--tv-gutter);
+  margin: 0 auto;
+}
+
+.tv-brand {
+  display: flex;
+  flex: none;
+  gap: 11px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.tv-brand__logo {
+  display: block;
+  height: 30px;
+}
+
+.tv-brand__divider {
+  width: 1px;
+  height: 22px;
+  background: var(--tv-border-input);
+}
+
+.tv-brand__tag {
+  font-family: var(--tv-font-mono);
+  font-size: 9.5px;
+  color: var(--tv-ink-400);
+  letter-spacing: 0.24em;
+  white-space: nowrap;
+}
+
+.tv-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2.2vw, 30px);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tv-nav__link {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--tv-ink-600);
+  text-decoration: none;
+}
+
+.tv-nav__link--active {
+  font-weight: 600;
+  color: var(--tv-cyan);
+}
+
+.tv-nav__phone {
+  font-family: var(--tv-font-display);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--tv-navy);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.tv-nav__cta {
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+  background: var(--tv-cyan);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(8 166 207 / 28%);
+}
+
+/* Collapse the nav to logo + the single last action on narrow screens. */
+@media (max-width: 760px) {
+  .tv-nav a:not(:last-of-type) {
+    display: none !important;
+  }
+
+  .tv-brand__divider,
+  .tv-brand__tag {
+    display: none !important;
+  }
+}

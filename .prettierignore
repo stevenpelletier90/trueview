@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Lockfiles
+composer.lock
+package-lock.json
+
+# PHP — Prettier has no PHP parser
+*.php
+
+# Minified / generated
+*.min.css
+*.min.js
+*.map
+
+# Logs
+*.log

@@ -1,0 +1,40 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 8
+    # Analyse across the supported runtime range (mirrors phpcs testVersion 7.4-8.5).
+    phpVersion:
+        min: 70400
+        max: 80500
+    paths:
+        - trueview-watchtower
+    # ACF/WordPress functions often have imprecise PHPDocs in the stubs.
+    treatPhpDocTypesAsCertain: false
+
+    # Minimal ignores — only for unfixable WordPress core patterns.
+    ignoreErrors:
+        # WordPress loop pattern: while ( $query->have_posts() ) is intentional.
+        -
+            message: '#While loop condition is always true#'
+            reportUnmatched: false
+        -
+            message: '#Unreachable statement - code above always terminates#'
+            reportUnmatched: false
+
+    # Keep the ignore list honest.
+    reportUnmatchedIgnoredErrors: true
+
+    # Deterministic output.
+    parallel:
+        maximumNumberOfProcesses: 1
+
+    # WordPress objects with dynamic/magic properties.
+    universalObjectCratesClasses:
+        - WP_Post
+        - WP_Term
+        - WP_User
+        - WP_Query
+        - WP_Comment
+        - WP_Error
+        - stdClass

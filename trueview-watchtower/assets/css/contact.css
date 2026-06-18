@@ -1,0 +1,286 @@
+/* =========================================================
+   Contact (page-contact.php) — Concept A · Clarity.
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+.tv-chero {
+  padding: clamp(48px, 6vw, 88px) var(--tv-gutter);
+  color: #fff;
+  background: var(--tv-navy);
+}
+
+.tv-chero__content {
+  max-width: 720px;
+}
+
+.tv-chero__eyebrow {
+  margin-bottom: 16px;
+}
+
+.tv-chero__title {
+  margin: 0 0 18px;
+  font-family: var(--tv-font-display);
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.tv-chero__lead {
+  max-width: 600px;
+  margin: 0;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.6;
+  color: var(--tv-on-navy);
+}
+
+/* ---------- Form + rail layout ---------- */
+.tv-contact {
+  padding: clamp(44px, 6vw, 90px) var(--tv-gutter);
+}
+
+.tv-contact__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: flex-start;
+  max-width: var(--tv-container);
+  margin: 0 auto;
+}
+
+.tv-contact__main {
+  flex: 1 1 420px;
+  min-width: 300px;
+}
+
+.tv-contact__rail {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+/* ---------- Form ---------- */
+.tv-form__title {
+  margin: 0 0 26px;
+  font-family: var(--tv-font-display);
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.tv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tv-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tv-form__field {
+  flex: 1 1 200px;
+}
+
+.tv-form__label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tv-ink-600);
+}
+
+.tv-form__control {
+  width: 100%;
+  font-family: var(--tv-font-body);
+  font-size: 15px;
+  color: var(--tv-ink);
+  border: 1.5px solid var(--tv-border-input);
+  border-radius: 9px;
+}
+
+.tv-form__input {
+  height: 50px;
+  padding: 0 15px;
+}
+
+.tv-form__textarea {
+  padding: 13px 15px;
+  resize: vertical;
+}
+
+.tv-form__submit {
+  height: 56px;
+  font-family: var(--tv-font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: var(--tv-cyan);
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 8px 20px rgb(8 166 207 / 30%);
+}
+
+.tv-form__note {
+  font-size: 13px;
+  color: var(--tv-ink-300);
+  text-align: center;
+}
+
+/* ---------- Quick-contact rail ---------- */
+.tv-rail {
+  padding: clamp(24px, 3vw, 34px);
+  color: #fff;
+  background: var(--tv-navy);
+  border-radius: 18px;
+}
+
+.tv-rail__title {
+  margin-bottom: 6px;
+  font-family: var(--tv-font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tv-rail__lead {
+  margin: 0 0 22px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--tv-on-navy);
+}
+
+.tv-rail__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  margin-bottom: 12px;
+  font-family: var(--tv-font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--tv-navy);
+  text-decoration: none;
+  background: var(--tv-cyan-bright);
+  border-radius: 10px;
+}
+
+.tv-rail__email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background: rgb(255 255 255 / 8%);
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 10px;
+}
+
+.tv-rail__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  margin-top: 22px;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+}
+
+.tv-rail__hour {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--tv-footer-text-soft);
+}
+
+/* ---------- Visit Us / locations ---------- */
+.tv-visit {
+  padding: clamp(48px, 6vw, 90px) var(--tv-gutter);
+  background: var(--tv-surface-alt);
+}
+
+.tv-visit__head {
+  max-width: 620px;
+  margin: 0 auto clamp(28px, 3vw, 44px);
+  text-align: center;
+}
+
+.tv-visit__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.tv-place {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--tv-border);
+  border-radius: 18px;
+}
+
+.tv-place__map {
+  position: relative;
+  height: 140px;
+  background-color: var(--tv-map);
+  background-image: linear-gradient(var(--tv-map-line) 1px, transparent 1px), linear-gradient(90deg, var(--tv-map-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.tv-place__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  padding: 7px 13px;
+  font-family: var(--tv-font-mono);
+  font-size: 11px;
+  color: var(--tv-ink-600);
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(21 49 79 / 12%);
+  transform: translate(-50%, -50%);
+}
+
+.tv-place__pin-dot {
+  width: 9px;
+  height: 9px;
+  background: var(--tv-cyan);
+  border-radius: 50%;
+}
+
+.tv-place__body {
+  padding: 24px;
+}
+
+.tv-place__city {
+  margin-bottom: 8px;
+  font-family: var(--tv-font-display);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.tv-place__addr {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--tv-ink-500);
+}
+
+.tv-place__hours {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--tv-ink-400);
+}
+
+.tv-place__emerg {
+  font-weight: 600;
+  color: var(--tv-green-dark);
+}

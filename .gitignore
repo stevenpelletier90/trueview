@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Linter / formatter caches
+.phpcs-cache
+.stylelintcache
+.eslintcache
+
+# Husky internals (regenerated on install)
+.husky/_/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE — share project-level VS Code config, keep the rest local
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary / scratch
+*.tmp
+*.bak
+*.backup
+tmp/

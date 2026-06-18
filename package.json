@@ -1,0 +1,67 @@
+{
+  "name": "trueview-watchtower-theme",
+  "version": "1.0.0",
+  "description": "True View Watchtower WordPress theme — dev tooling",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.3",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.8.4",
+    "stylelint": "^17.13.0",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "scripts": {
+    "lint": "npm run lint:css && npm run lint:js && npm run lint:php && npm run lint:md",
+    "lint:css": "npx stylelint \"trueview-watchtower/**/*.css\"",
+    "lint:css:fix": "npx stylelint \"trueview-watchtower/**/*.css\" --fix",
+    "lint:js": "npx eslint --no-error-on-unmatched-pattern \"trueview-watchtower/**/*.js\"",
+    "lint:js:fix": "npx eslint --no-error-on-unmatched-pattern \"trueview-watchtower/**/*.js\" --fix",
+    "lint:php": "php vendor/bin/phpcs",
+    "lint:php:fix": "php vendor/bin/phpcbf",
+    "lint:php:syntax": "composer lint:syntax",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "normalize": "composer normalize",
+    "normalize:check": "composer normalize --dry-run",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "phpstan": "php vendor/bin/phpstan analyse --memory-limit=4G",
+    "validate": "concurrently --names css,js,php,syntax,stan,fmt,md,norm \"npm run lint:css\" \"npm run lint:js\" \"npm run lint:php\" \"npm run lint:php:syntax\" \"npm run phpstan\" \"npm run format:check\" \"npm run lint:md\" \"npm run normalize:check\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "trueview-watchtower/**/*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "trueview-watchtower/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "trueview-watchtower/**/*.php": [
+      "node scripts/phpcbf-staged.js",
+      "php -d memory_limit=-1 vendor/bin/phpcs"
+    ],
+    "composer.json": [
+      "composer normalize"
+    ],
+    "!(composer).{json,yml,yaml,html}": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "markdownlint-cli2 --fix",
+      "prettier --write"
+    ]
+  }
+}
