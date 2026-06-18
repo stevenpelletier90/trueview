@@ -37,3 +37,6 @@ desktop.ini
 *.bak
 *.backup
 tmp/
+
+# Build artifacts (theme zip for upload)
+*.zip
