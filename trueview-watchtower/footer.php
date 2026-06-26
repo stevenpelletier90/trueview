@@ -6,6 +6,8 @@
  */
 
 ?>
+</main>
+
 <footer class="tv-footer">
 	<div class="tv-container">
 		<div class="tv-footer__top">

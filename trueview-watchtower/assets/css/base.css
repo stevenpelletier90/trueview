@@ -5,7 +5,7 @@
 
 :root {
   /* Brand */
-  --tv-cyan: #08a6cf;
+  --tv-cyan: #0a7a96;
   --tv-cyan-bright: #18c6ed;
   --tv-navy: #15314f;
   --tv-navy-dark: #0e2740;
@@ -14,7 +14,7 @@
   --tv-ink: #15314f;
   --tv-ink-600: #3a5266;
   --tv-ink-500: #5a7184;
-  --tv-ink-400: #7c8b98;
+  --tv-ink-400: #5f7280;
   --tv-ink-300: #9aaab6;
 
   /* Text on navy */
@@ -22,12 +22,12 @@
   --tv-on-navy-soft: #cddbe6;
   --tv-footer-text: #8aa0b2;
   --tv-footer-text-soft: #c7d5e1;
-  --tv-footer-label: #5e789a;
-  --tv-footer-copy: #6e869b;
+  --tv-footer-label: #7c93b0;
+  --tv-footer-copy: #7e93a6;
 
   /* Status */
   --tv-green: #19c28e;
-  --tv-green-dark: #19a37a;
+  --tv-green-dark: #15805e;
 
   /* Surfaces */
   --tv-surface: #fff;
