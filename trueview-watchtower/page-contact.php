@@ -86,7 +86,7 @@ get_header();
 	<div class="tv-container">
 		<div class="tv-visit__head">
 			<div class="tv-eyebrow">Visit Us</div>
-			<h2 class="tv-h2">Two locations, two states</h2>
+			<h2 class="tv-h2">Two Northeast locations</h2>
 		</div>
 		<div class="tv-visit__grid">
 			<div class="tv-place">

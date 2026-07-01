@@ -13,9 +13,9 @@ $trueview_contact = trueview_contact_url();
 <section class="tv-hero">
 	<div class="tv-hero__inner">
 		<div class="tv-hero__content">
-			<div class="tv-eyebrow tv-eyebrow--lg tv-hero__eyebrow">Mobile Surveillance Units · NY &amp; PA</div>
+			<div class="tv-eyebrow tv-eyebrow--lg tv-hero__eyebrow">Mobile Surveillance Units · Northeast &amp; New England</div>
 			<h1 class="tv-hero__title">Site security that sets up in&nbsp;minutes.</h1>
-			<p class="tv-hero__lead">Solar-powered, Starlink-connected surveillance units that deter theft, detect motion, and keep your projects moving — monitored 24/7, on grid or off.</p>
+			<p class="tv-hero__lead">True View Watchtower deploys solar-powered, Starlink-connected surveillance units that deter theft, detect motion, and keep your projects moving — monitored 24/7, on grid or off.</p>
 			<div class="tv-hero__actions">
 				<a class="tv-btn tv-btn--primary" href="<?php echo esc_url( $trueview_contact ); ?>">Free Security Consultation</a>
 				<a class="tv-btn tv-btn--ghost" href="tel:6076008065">Call or Text · 607-600-8065</a>
@@ -50,7 +50,7 @@ $trueview_contact = trueview_contact_url();
 <section class="tv-section" id="why">
 	<div class="tv-container">
 		<div class="tv-why__head">
-			<div class="tv-eyebrow">Why True View</div>
+			<div class="tv-eyebrow">Why Watchtower</div>
 			<h2 class="tv-h2">Built for sites that traditional security leaves exposed.</h2>
 		</div>
 		<div class="tv-why__grid">
@@ -88,6 +88,36 @@ $trueview_contact = trueview_contact_url();
 	</div>
 </section>
 
+<section class="tv-section tv-section--dark tv-compare" id="compare">
+	<div class="tv-container">
+		<div class="tv-compare__head">
+			<div class="tv-eyebrow tv-eyebrow--bright tv-eyebrow--accent">The Difference</div>
+			<h2 class="tv-h2 tv-compare__title">True View Watchtower vs. traditional security.</h2>
+			<p class="tv-compare__lead">One rapid-deploy unit does the work of guards and fixed cameras &mdash; without the gaps.</p>
+		</div>
+		<div class="tv-compare__scroll">
+			<table class="tv-compare__table">
+				<caption class="tv-visually-hidden">How True View Watchtower compares to traditional security approaches.</caption>
+				<thead>
+					<tr>
+						<th scope="col">Capability</th>
+						<th scope="col" class="tv-compare__col-us">True View Watchtower</th>
+						<th scope="col">Traditional guards &amp; fixed cameras</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><th scope="row">Setup time</th><td class="tv-compare__us">Minutes</td><td class="tv-compare__them">Days&ndash;weeks</td></tr>
+					<tr><th scope="row">Off-grid &amp; solar powered</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">No</td></tr>
+					<tr><th scope="row">24/7 live monitoring</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Limited</td></tr>
+					<tr><th scope="row">Relocatable on demand</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">No</td></tr>
+					<tr><th scope="row">Wide-area radar &amp; multi-camera</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Single view</td></tr>
+					<tr><th scope="row">NDAA-compliant equipment</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Varies</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+
 <section class="tv-section tv-section--alt" id="unit">
 	<div class="tv-unit__inner">
 		<div class="tv-unit__media">
@@ -96,7 +126,7 @@ $trueview_contact = trueview_contact_url();
 		<div class="tv-unit__content">
 			<div class="tv-eyebrow">The Unit</div>
 			<h2 class="tv-h2 tv-unit__title">One trailer. Total coverage.</h2>
-			<p class="tv-unit__lead">Each unit is configured for your specific site and ready to deter from the moment it arrives.</p>
+			<p class="tv-unit__lead">Each True View Watchtower unit is configured for your specific site and ready to deter from the moment it arrives.</p>
 			<div class="tv-unit__list">
 				<div class="tv-unit__item"><span class="tv-unit__bullet"></span><span class="tv-unit__text">Pan-tilt-zoom &amp; multi-camera radar coverage</span></div>
 				<div class="tv-unit__item"><span class="tv-unit__bullet"></span><span class="tv-unit__text">AI detection, license-plate recognition &amp; two-way audio</span></div>
@@ -121,15 +151,15 @@ $trueview_contact = trueview_contact_url();
 	</div>
 </section>
 
-<section class="tv-stats">
+<section class="tv-stats tv-stats--dark">
 	<div class="tv-stats__grid">
 		<div class="tv-stats__item">
 			<div class="tv-stats__num">24/7</div>
 			<div class="tv-stats__label">Real-Time Monitoring</div>
 		</div>
 		<div class="tv-stats__item">
-			<div class="tv-stats__num">2</div>
-			<div class="tv-stats__label">States Served · NY &amp; PA</div>
+			<div class="tv-stats__num tv-stats__num--word">Nationwide</div>
+			<div class="tv-stats__label">Deployment &amp; Shipping</div>
 		</div>
 		<div class="tv-stats__item">
 			<div class="tv-stats__num">100%</div>
@@ -144,7 +174,7 @@ $trueview_contact = trueview_contact_url();
 
 <section class="tv-section tv-section--alt">
 	<div class="tv-container">
-		<h2 class="tv-h2 tv-locations__title">Serving New York &amp; Pennsylvania</h2>
+		<h2 class="tv-h2 tv-locations__title">Based in the Northeast &amp; New England &mdash; available nationwide</h2>
 		<div class="tv-locations__grid">
 			<div class="tv-loc-card">
 				<div class="tv-loc-card__region">NEW YORK</div>

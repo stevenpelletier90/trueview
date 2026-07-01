@@ -65,6 +65,7 @@
   font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 700;
   line-height: 1.12;
+  color: #fff;
   letter-spacing: -0.015em;
 }
 
@@ -89,7 +90,7 @@
   margin-bottom: 7px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--tv-ink-600);
+  color: var(--tv-on-navy-soft);
 }
 
 .tv-form__control {
@@ -97,6 +98,7 @@
   font-family: var(--tv-font-body);
   font-size: 15px;
   color: var(--tv-ink);
+  background: #fff;
   border: 1.5px solid var(--tv-border-input);
   border-radius: 9px;
 }
@@ -135,6 +137,7 @@
   padding: clamp(24px, 3vw, 34px);
   color: #fff;
   background: var(--tv-navy);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 18px;
 }
 
@@ -201,7 +204,7 @@
 /* ---------- Visit Us / locations ---------- */
 .tv-visit {
   padding: clamp(48px, 6vw, 90px) var(--tv-gutter);
-  background: var(--tv-surface-alt);
+  background: var(--tv-navy);
 }
 
 .tv-visit__head {
@@ -221,6 +224,7 @@
   background: #fff;
   border: 1px solid var(--tv-border);
   border-radius: 18px;
+  box-shadow: 0 18px 40px rgb(6 20 36 / 30%);
 }
 
 .tv-place__map {
@@ -264,6 +268,7 @@
   font-family: var(--tv-font-display);
   font-size: 21px;
   font-weight: 600;
+  color: var(--tv-ink);
 }
 
 .tv-place__addr {

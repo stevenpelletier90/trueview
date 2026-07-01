@@ -13,7 +13,7 @@
 		<div class="tv-footer__top">
 			<div class="tv-footer__brand">
 				<div class="tv-footer__logo"><img class="tv-footer__logo-img" src="<?php echo esc_url( trueview_asset( 'logo.png' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></div>
-				<p class="tv-footer__desc">Mobile surveillance units for construction sites and remote locations across New York &amp; Pennsylvania.</p>
+				<p class="tv-footer__desc">Mobile surveillance units for construction sites and remote locations across the Northeast &amp; New England &mdash; available nationwide.</p>
 			</div>
 			<div class="tv-footer__col">
 				<div class="tv-footer__label">CONTACT</div>

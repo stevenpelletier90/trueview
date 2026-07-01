@@ -14,5 +14,8 @@ package-lock.json
 *.min.js
 *.map
 
+# Design reference export (huge single-file HTML with embedded assets)
+True View Watchtower - Concepts (standalone).html
+
 # Logs
 *.log

@@ -31,6 +31,7 @@
   font-size: clamp(36px, 5.2vw, 60px);
   font-weight: 700;
   line-height: 1.04;
+  color: #fff;
   letter-spacing: -0.02em;
 }
 
@@ -39,7 +40,7 @@
   margin: 0 0 28px;
   font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.6;
-  color: var(--tv-ink-500);
+  color: var(--tv-on-navy-soft);
 }
 
 .tv-hero__actions {
@@ -104,6 +105,7 @@
   font-family: var(--tv-font-display);
   font-size: 15px;
   font-weight: 700;
+  color: var(--tv-ink);
 }
 
 .tv-hero__badge-sub {
@@ -113,9 +115,9 @@
 
 /* ---------- Trust bar ---------- */
 .tv-trust {
-  background: var(--tv-surface-alt);
-  border-top: 1px solid var(--tv-border);
-  border-bottom: 1px solid var(--tv-border);
+  background: var(--tv-navy);
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
 }
 
 .tv-trust__inner {
@@ -143,8 +145,10 @@
 
 .tv-why__card {
   padding: 26px;
+  background: #fff;
   border: 1px solid var(--tv-border);
   border-radius: 16px;
+  box-shadow: 0 18px 40px rgb(6 20 36 / 30%);
 }
 
 .tv-why__num {
@@ -160,6 +164,7 @@
   font-family: var(--tv-font-display);
   font-size: 19px;
   font-weight: 600;
+  color: var(--tv-ink);
 }
 
 .tv-why__desc {
@@ -204,7 +209,7 @@
   margin: 0 0 24px;
   font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.6;
-  color: var(--tv-ink-500);
+  color: var(--tv-on-navy-soft);
 }
 
 .tv-unit__list {
@@ -230,7 +235,7 @@
 
 .tv-unit__text {
   font-size: 16px;
-  color: var(--tv-ink-600);
+  color: var(--tv-on-navy-soft);
 }
 
 /* ---------- Coverage image band ---------- */
@@ -336,6 +341,7 @@
   background: #fff;
   border: 1px solid var(--tv-border);
   border-radius: 16px;
+  box-shadow: 0 18px 40px rgb(6 20 36 / 30%);
 }
 
 .tv-loc-card__region {
@@ -351,6 +357,7 @@
   font-family: var(--tv-font-display);
   font-size: 20px;
   font-weight: 600;
+  color: var(--tv-ink);
 }
 
 .tv-loc-card__addr {
@@ -419,4 +426,98 @@
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+}
+
+/* ---------- Comparison — Watchtower vs. traditional ---------- */
+.tv-compare__head {
+  max-width: 680px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.tv-compare__title {
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.tv-compare__lead {
+  margin: 0;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.6;
+  color: var(--tv-on-navy);
+}
+
+.tv-compare__scroll {
+  overflow-x: auto;
+}
+
+.tv-compare__table {
+  width: 100%;
+  min-width: 560px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.tv-compare__table th,
+.tv-compare__table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.tv-compare__table thead th {
+  font-family: var(--tv-font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tv-on-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tv-compare__table tbody th {
+  font-family: var(--tv-font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tv-compare__col-us {
+  color: var(--tv-cyan-bright);
+  background: rgb(255 255 255 / 4%);
+}
+
+.tv-compare__us {
+  font-weight: 600;
+  color: #fff;
+  background: rgb(255 255 255 / 4%);
+}
+
+.tv-compare__us::before {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  vertical-align: -2px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318c6ed' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='5 12 10 17 19 7'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+}
+
+.tv-compare__them {
+  color: var(--tv-on-navy);
+}
+
+/* ---------- Stats — dark variant (Concept B) ---------- */
+.tv-stats--dark {
+  background: var(--tv-navy-dark);
+}
+
+.tv-stats--dark .tv-stats__num {
+  color: var(--tv-cyan-bright);
+}
+
+.tv-stats--dark .tv-stats__label {
+  color: var(--tv-on-navy);
+}
+
+.tv-stats__num--word {
+  font-size: clamp(26px, 3.4vw, 38px);
 }

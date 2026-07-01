@@ -38,5 +38,9 @@ desktop.ini
 *.backup
 tmp/
 
+# Dev-only static preview harness (render theme templates outside WordPress)
+_preview*.html
+_preview_render.php
+
 # Build artifacts (theme zip for upload)
 *.zip

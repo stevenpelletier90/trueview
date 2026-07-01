@@ -39,7 +39,7 @@ if ( is_front_page() ) {
 		</a>
 		<nav class="tv-nav">
 			<a class="tv-nav__link" href="<?php echo esc_url( $trueview_unit ); ?>">The Unit</a>
-			<a class="tv-nav__link" href="<?php echo esc_url( $trueview_why ); ?>">Why True View</a>
+			<a class="tv-nav__link" href="<?php echo esc_url( $trueview_why ); ?>">Why Watchtower</a>
 			<a class="tv-nav__link" href="<?php echo esc_url( $trueview_cov ); ?>">Coverage</a>
 			<?php if ( is_front_page() ) : ?>
 				<a class="tv-nav__link" href="<?php echo esc_url( $trueview_contact ); ?>">Locations</a>
