@@ -65,7 +65,7 @@
 .tv-hero__img {
   display: block;
   width: 100%;
-  height: clamp(360px, 46vw, 560px);
+  height: clamp(440px, 54vw, 680px);
   object-fit: cover;
 }
 
@@ -184,16 +184,16 @@
 }
 
 .tv-unit__media {
-  flex: 1 1 400px;
+  flex: 1 1 520px;
   min-width: 300px;
   padding-block: clamp(28px, 5vw, 60px);
   text-align: center;
-  background: radial-gradient(ellipse 58% 66% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
+  background: radial-gradient(ellipse 60% 68% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
 }
 
 .tv-unit__img {
   display: block;
-  width: min(100%, 560px);
+  width: min(100%, 720px);
   margin: 0 auto;
 }
 

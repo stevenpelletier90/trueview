@@ -37,6 +37,7 @@
 /* ---------- Form + rail layout ---------- */
 .tv-contact {
   padding: clamp(44px, 6vw, 90px) var(--tv-gutter);
+  background: linear-gradient(180deg, #fff 0%, #eef3f8 100%);
 }
 
 .tv-contact__inner {
@@ -65,7 +66,7 @@
   font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 700;
   line-height: 1.12;
-  color: #fff;
+  color: var(--tv-ink);
   letter-spacing: -0.015em;
 }
 
