@@ -184,15 +184,15 @@
 }
 
 .tv-unit__media {
-  flex: 1 1 320px;
-  min-width: 280px;
+  flex: 1 1 400px;
+  min-width: 300px;
   text-align: center;
-  background: radial-gradient(circle at 50% 44%, rgb(255 255 255 / 16%) 0%, rgb(24 198 237 / 10%) 40%, transparent 70%);
+  background: radial-gradient(ellipse 56% 84% at 50% 47%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 74%);
 }
 
 .tv-unit__img {
   display: block;
-  width: min(100%, 420px);
+  width: min(100%, 560px);
   margin: 0 auto;
 }
 
