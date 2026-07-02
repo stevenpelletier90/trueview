@@ -23,7 +23,7 @@ $trueview_contact = trueview_contact_url();
 		</div>
 		<div class="tv-hero__media">
 			<div class="tv-hero__frame">
-				<img class="tv-hero__img" src="<?php echo esc_url( trueview_asset( 'tw-24.jpg' ) ); ?>" alt="True View Watchtower deployed on site">
+				<img class="tv-hero__img" src="<?php echo esc_url( trueview_asset( 'hero.jpg' ) ); ?>" alt="True View Watchtower mobile surveillance unit deployed on site">
 				<div class="tv-hero__scrim"></div>
 			</div>
 			<div class="tv-hero__badge">
