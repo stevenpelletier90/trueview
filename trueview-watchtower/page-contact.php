@@ -7,9 +7,9 @@
  * Bound automatically to a Page with the slug "contact"; also selectable
  * from the page-template dropdown via the "Contact" template name above.
  *
- * The form is intentionally static for now — the submit button does nothing.
- * Field `name` attributes are in place so it can be wired to a handler or a
- * form plugin (Contact Form 7 / WPForms / Fluent Forms) later.
+ * The consultation form is rendered by Gravity Forms (form ID 1) via
+ * gravity_form(). If Gravity Forms is inactive, a phone/email fallback shows
+ * so the page never breaks.
  *
  * @package trueview-watchtower
  */
@@ -33,38 +33,13 @@ get_header();
 		<div class="tv-contact__main">
 			<div class="tv-eyebrow">Free Consultation</div>
 			<h2 class="tv-form__title">Request a security assessment</h2>
-			<form class="tv-form" action="" method="post" novalidate>
-				<div class="tv-form__row">
-					<div class="tv-form__field">
-						<label class="tv-form__label" for="tv-name">Full name</label>
-						<input class="tv-form__control tv-form__input" id="tv-name" name="name" type="text" placeholder="Your name">
-					</div>
-					<div class="tv-form__field">
-						<label class="tv-form__label" for="tv-company">Company</label>
-						<input class="tv-form__control tv-form__input" id="tv-company" name="company" type="text" placeholder="Company name">
-					</div>
+			<div class="tv-form tv-form--gravity">
+					<?php if ( function_exists( 'gravity_form' ) ) : ?>
+						<?php gravity_form( 1, false, false, false, null, true ); ?>
+					<?php else : ?>
+						<p class="tv-form__note">Our consultation form is temporarily unavailable. Please call or text <a href="tel:6076008065">607-600-8065</a> or email <a href="mailto:info@trueviewny.com">info@trueviewny.com</a> and we'll respond within one business day.</p>
+					<?php endif; ?>
 				</div>
-				<div class="tv-form__row">
-					<div class="tv-form__field">
-						<label class="tv-form__label" for="tv-phone">Phone</label>
-						<input class="tv-form__control tv-form__input" id="tv-phone" name="phone" type="tel" placeholder="(607) 000-0000">
-					</div>
-					<div class="tv-form__field">
-						<label class="tv-form__label" for="tv-email">Email</label>
-						<input class="tv-form__control tv-form__input" id="tv-email" name="email" type="email" placeholder="you@company.com">
-					</div>
-				</div>
-				<div class="tv-form__field">
-					<label class="tv-form__label" for="tv-location">Site location</label>
-					<input class="tv-form__control tv-form__input" id="tv-location" name="location" type="text" placeholder="City, State">
-				</div>
-				<div class="tv-form__field">
-					<label class="tv-form__label" for="tv-message">How can we help?</label>
-					<textarea class="tv-form__control tv-form__textarea" id="tv-message" name="message" rows="5" placeholder="Tell us about your site and what you'd like to protect…"></textarea>
-				</div>
-				<button class="tv-form__submit" type="button">Request Free Consultation</button>
-				<div class="tv-form__note">We typically respond within one business day.</div>
-			</form>
 		</div>
 
 		<div class="tv-contact__rail">
