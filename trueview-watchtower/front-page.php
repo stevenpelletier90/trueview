@@ -106,14 +106,14 @@ $trueview_contact = trueview_contact_url();
 					</tr>
 				</thead>
 				<tbody>
-					<tr><th scope="row">Starlink connectivity</th><td class="tv-compare__us">Standard Starlink satellite on every unit</td><td class="tv-compare__them">Not offered, or an extra charge &mdash; the standard unit relies on unreliable cell towers</td></tr>
-					<tr><th scope="row">Total cost of ownership</th><td class="tv-compare__us">Lower overall cost &mdash; lower monthly costs</td><td class="tv-compare__them">Expensive monthly subscription required after you purchase the unit</td></tr>
-					<tr><th scope="row">Solar power</th><td class="tv-compare__us">3 panels and a rugged battery configuration built for the Northeast climate</td><td class="tv-compare__them">Standard 2-panel design; battery array can't handle hard NE winters</td></tr>
-					<tr><th scope="row">Backup generator</th><td class="tv-compare__us">Automatic gasoline generator included with every unit</td><td class="tv-compare__them">Optional methanol generator at extra cost, plus an expensive monthly surcharge</td></tr>
-					<tr><th scope="row">Custom vinyl wrap</th><td class="tv-compare__us">Custom vinyl wrap design and installation</td><td class="tv-compare__them">Not offered, or an extra charge</td></tr>
-					<tr><th scope="row">High-speed Wi-Fi</th><td class="tv-compare__us">High-speed Wi-Fi and internet access included with every unit</td><td class="tv-compare__them">No Wi-Fi offered</td></tr>
-					<tr><th scope="row">Customization &amp; flexibility</th><td class="tv-compare__us">Customization and flexibility tailored to your needs</td><td class="tv-compare__them">More standardized packages that lack Watchtower's power and technology</td></tr>
-					<tr><th scope="row">Company reputation</th><td class="tv-compare__us">Respected, 5/5-star-rated company</td><td class="tv-compare__them">Risky, low-rated on customer reviews</td></tr>
+					<tr><th scope="row">Starlink connectivity</th><td class="tv-compare__us" data-label="True View Watchtower">Standard Starlink satellite on every unit</td><td class="tv-compare__them" data-label="Our competition">Not offered, or an extra charge &mdash; the standard unit relies on unreliable cell towers</td></tr>
+					<tr><th scope="row">Total cost of ownership</th><td class="tv-compare__us" data-label="True View Watchtower">Lower overall cost &mdash; lower monthly costs</td><td class="tv-compare__them" data-label="Our competition">Expensive monthly subscription required after you purchase the unit</td></tr>
+					<tr><th scope="row">Solar power</th><td class="tv-compare__us" data-label="True View Watchtower">3 panels and a rugged battery configuration built for the Northeast climate</td><td class="tv-compare__them" data-label="Our competition">Standard 2-panel design; battery array can't handle hard NE winters</td></tr>
+					<tr><th scope="row">Backup generator</th><td class="tv-compare__us" data-label="True View Watchtower">Automatic gasoline generator included with every unit</td><td class="tv-compare__them" data-label="Our competition">Optional methanol generator at extra cost, plus an expensive monthly surcharge</td></tr>
+					<tr><th scope="row">Custom vinyl wrap</th><td class="tv-compare__us" data-label="True View Watchtower">Custom vinyl wrap design and installation</td><td class="tv-compare__them" data-label="Our competition">Not offered, or an extra charge</td></tr>
+					<tr><th scope="row">High-speed Wi-Fi</th><td class="tv-compare__us" data-label="True View Watchtower">High-speed Wi-Fi and internet access included with every unit</td><td class="tv-compare__them" data-label="Our competition">No Wi-Fi offered</td></tr>
+					<tr><th scope="row">Customization &amp; flexibility</th><td class="tv-compare__us" data-label="True View Watchtower">Customization and flexibility tailored to your needs</td><td class="tv-compare__them" data-label="Our competition">More standardized packages that lack Watchtower's power and technology</td></tr>
+					<tr><th scope="row">Company reputation</th><td class="tv-compare__us" data-label="True View Watchtower">Respected, 5/5-star-rated company</td><td class="tv-compare__them" data-label="Our competition">Risky, low-rated on customer reviews</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -124,7 +124,6 @@ $trueview_contact = trueview_contact_url();
 	<div class="tv-unit__inner">
 		<div class="tv-unit__media">
 			<img class="tv-unit__img" src="<?php echo esc_url( trueview_asset( 'unit.png' ) ); ?>" alt="True View Watchtower mobile surveillance unit">
-			<div class="tv-unit__placeholder" aria-hidden="true">Image coming soon</div>
 		</div>
 		<div class="tv-unit__content">
 			<div class="tv-eyebrow">The Unit</div>

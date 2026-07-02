@@ -69,6 +69,13 @@
   object-fit: cover;
 }
 
+/* Show the whole portrait on mobile instead of cropping it. */
+@media (max-width: 760px) {
+  .tv-hero__img {
+    height: auto;
+  }
+}
+
 .tv-hero__scrim {
   position: absolute;
   inset: 0;
@@ -175,62 +182,41 @@
 
 /* ---------- Product showcase ---------- */
 .tv-unit__inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(12px, 2vw, 32px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 3vw, 40px);
   align-items: center;
   max-width: var(--tv-container);
   margin: 0 auto;
 }
 
 .tv-unit__media {
-  flex: 1.6 1 520px;
-  min-width: 300px;
-  padding-block: clamp(28px, 5vw, 60px);
+  padding-block: clamp(20px, 4vw, 56px);
   text-align: center;
   background: radial-gradient(ellipse 58% 68% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
 }
 
 .tv-unit__img {
   display: block;
-  width: min(100%, 900px);
+  width: min(100%, 400px);
   margin: 0 auto;
 }
 
-.tv-unit__placeholder {
-  display: none;
+.tv-unit__content {
+  min-width: 0;
 }
 
-/* On mobile, hide the floating unit + glow; show a square placeholder. */
-@media (max-width: 760px) {
-  .tv-unit__media {
-    padding-block: 0;
-    background: none;
+/* Two columns from tablet up — let the showcase go wide and the image go large. */
+@media (min-width: 900px) {
+  .tv-unit__inner {
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(24px, 3vw, 56px);
+    max-width: 1500px;
   }
 
   .tv-unit__img {
-    display: none;
+    width: min(100%, 1040px);
   }
-
-  .tv-unit__placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1 / 1;
-    font-family: var(--tv-font-mono);
-    font-size: 12px;
-    color: var(--tv-on-navy);
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    background: rgb(255 255 255 / 6%);
-    border: 1px dashed rgb(255 255 255 / 20%);
-    border-radius: 16px;
-  }
-}
-
-.tv-unit__content {
-  flex: 1 1 340px;
-  min-width: 300px;
 }
 
 .tv-unit__title {
@@ -544,6 +530,77 @@
 
 .tv-compare__them {
   color: var(--tv-on-navy);
+}
+
+/* Mobile: collapse the table into stacked, labeled cards — no sideways scroll. */
+@media (max-width: 760px) {
+  .tv-compare__scroll {
+    overflow-x: visible;
+  }
+
+  .tv-compare__table {
+    min-width: 0;
+  }
+
+  .tv-compare__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .tv-compare__table,
+  .tv-compare__table tbody,
+  .tv-compare__table tr,
+  .tv-compare__table th,
+  .tv-compare__table td {
+    display: block;
+  }
+
+  .tv-compare__table tr {
+    margin-bottom: 16px;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 14px;
+  }
+
+  .tv-compare__table th,
+  .tv-compare__table td {
+    padding: 13px 16px;
+    border-bottom: 0;
+  }
+
+  .tv-compare__table tbody th {
+    font-size: 15px;
+    color: var(--tv-cyan-bright);
+    background: rgb(255 255 255 / 4%);
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+  }
+
+  .tv-compare__us::before,
+  .tv-compare__them::before {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0 4px;
+    font-family: var(--tv-font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    content: attr(data-label);
+    background: none;
+  }
+
+  .tv-compare__us::before {
+    color: var(--tv-cyan-bright);
+  }
+
+  .tv-compare__them::before {
+    color: var(--tv-on-navy);
+  }
 }
 
 /* ---------- Stats — dark variant (Concept B) ---------- */

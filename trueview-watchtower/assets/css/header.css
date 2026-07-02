@@ -74,12 +74,18 @@
 }
 
 .tv-nav__phone {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--tv-font-display);
   font-size: 14.5px;
   font-weight: 700;
   color: #fff;
   white-space: nowrap;
   text-decoration: none;
+}
+
+.tv-nav__phone-icon {
+  display: none;
 }
 
 .tv-nav__cta {
@@ -94,18 +100,42 @@
   box-shadow: 0 4px 12px rgb(8 166 207 / 28%);
 }
 
-/* Collapse the nav to logo + the single last action on narrow screens. */
-@media (max-width: 760px) {
-  .tv-nav a:not(:last-of-type) {
-    display: none !important;
+/* Collapse the nav early — short homepage. Keep logo + phone icon + CTA. */
+@media (max-width: 1024px) {
+  .tv-nav__link {
+    display: none;
   }
 
   .tv-brand__divider,
   .tv-brand__tag {
-    display: none !important;
+    display: none;
   }
 
+  .tv-nav__phone-num {
+    display: none;
+  }
+
+  .tv-nav__phone-icon {
+    display: block;
+  }
+
+  .tv-nav__phone {
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--tv-cyan-bright);
+    background: rgb(255 255 255 / 8%);
+    border: 1px solid rgb(255 255 255 / 16%);
+    border-radius: 9px;
+  }
+}
+
+@media (max-width: 760px) {
   .tv-brand__logo {
     height: 34px;
+  }
+
+  .tv-nav {
+    gap: 12px;
   }
 }
