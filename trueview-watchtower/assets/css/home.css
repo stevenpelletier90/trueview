@@ -186,14 +186,46 @@
 .tv-unit__media {
   flex: 1 1 400px;
   min-width: 300px;
+  padding-block: clamp(28px, 5vw, 60px);
   text-align: center;
-  background: radial-gradient(ellipse 56% 84% at 50% 47%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 74%);
+  background: radial-gradient(ellipse 58% 66% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
 }
 
 .tv-unit__img {
   display: block;
   width: min(100%, 560px);
   margin: 0 auto;
+}
+
+.tv-unit__placeholder {
+  display: none;
+}
+
+/* On mobile, hide the floating unit + glow; show a square placeholder. */
+@media (max-width: 760px) {
+  .tv-unit__media {
+    padding-block: 0;
+    background: none;
+  }
+
+  .tv-unit__img {
+    display: none;
+  }
+
+  .tv-unit__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    font-family: var(--tv-font-mono);
+    font-size: 12px;
+    color: var(--tv-on-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background: rgb(255 255 255 / 6%);
+    border: 1px dashed rgb(255 255 255 / 20%);
+    border-radius: 16px;
+  }
 }
 
 .tv-unit__content {

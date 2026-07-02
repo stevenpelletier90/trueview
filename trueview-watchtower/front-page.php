@@ -124,6 +124,7 @@ $trueview_contact = trueview_contact_url();
 	<div class="tv-unit__inner">
 		<div class="tv-unit__media">
 			<img class="tv-unit__img" src="<?php echo esc_url( trueview_asset( 'unit.png' ) ); ?>" alt="True View Watchtower mobile surveillance unit">
+			<div class="tv-unit__placeholder" aria-hidden="true">Image coming soon</div>
 		</div>
 		<div class="tv-unit__content">
 			<div class="tv-eyebrow">The Unit</div>
