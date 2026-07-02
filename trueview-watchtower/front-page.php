@@ -92,26 +92,28 @@ $trueview_contact = trueview_contact_url();
 	<div class="tv-container">
 		<div class="tv-compare__head">
 			<div class="tv-eyebrow tv-eyebrow--bright tv-eyebrow--accent">The Difference</div>
-			<h2 class="tv-h2 tv-compare__title">True View Watchtower vs. traditional security.</h2>
-			<p class="tv-compare__lead">One rapid-deploy unit does the work of guards and fixed cameras &mdash; without the gaps.</p>
+			<h2 class="tv-h2 tv-compare__title">True View Watchtower vs. the competition.</h2>
+			<p class="tv-compare__lead">See how a fully-equipped Watchtower unit stacks up against the standard competitor package &mdash; feature for feature.</p>
 		</div>
 		<div class="tv-compare__scroll">
 			<table class="tv-compare__table">
-				<caption class="tv-visually-hidden">How True View Watchtower compares to traditional security approaches.</caption>
+				<caption class="tv-visually-hidden">How True View Watchtower compares to competing surveillance units.</caption>
 				<thead>
 					<tr>
-						<th scope="col">Capability</th>
+						<th scope="col">Feature</th>
 						<th scope="col" class="tv-compare__col-us">True View Watchtower</th>
-						<th scope="col">Traditional guards &amp; fixed cameras</th>
+						<th scope="col">Our competition</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr><th scope="row">Setup time</th><td class="tv-compare__us">Minutes</td><td class="tv-compare__them">Days&ndash;weeks</td></tr>
-					<tr><th scope="row">Off-grid &amp; solar powered</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">No</td></tr>
-					<tr><th scope="row">24/7 live monitoring</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Limited</td></tr>
-					<tr><th scope="row">Relocatable on demand</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">No</td></tr>
-					<tr><th scope="row">Wide-area radar &amp; multi-camera</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Single view</td></tr>
-					<tr><th scope="row">NDAA-compliant equipment</th><td class="tv-compare__us">Yes</td><td class="tv-compare__them">Varies</td></tr>
+					<tr><th scope="row">Starlink connectivity</th><td class="tv-compare__us">Standard Starlink satellite on every unit</td><td class="tv-compare__them">Not offered, or an extra charge &mdash; the standard unit relies on unreliable cell towers</td></tr>
+					<tr><th scope="row">Total cost of ownership</th><td class="tv-compare__us">Lower overall cost &mdash; lower monthly costs</td><td class="tv-compare__them">Expensive monthly subscription required after you purchase the unit</td></tr>
+					<tr><th scope="row">Solar power</th><td class="tv-compare__us">3 panels and a rugged battery configuration built for the Northeast climate</td><td class="tv-compare__them">Standard 2-panel design; battery array can't handle hard NE winters</td></tr>
+					<tr><th scope="row">Backup generator</th><td class="tv-compare__us">Automatic gasoline generator included with every unit</td><td class="tv-compare__them">Optional methanol generator at extra cost, plus an expensive monthly surcharge</td></tr>
+					<tr><th scope="row">Custom vinyl wrap</th><td class="tv-compare__us">Custom vinyl wrap design and installation</td><td class="tv-compare__them">Not offered, or an extra charge</td></tr>
+					<tr><th scope="row">High-speed Wi-Fi</th><td class="tv-compare__us">High-speed Wi-Fi and internet access included with every unit</td><td class="tv-compare__them">No Wi-Fi offered</td></tr>
+					<tr><th scope="row">Customization &amp; flexibility</th><td class="tv-compare__us">Customization and flexibility tailored to your needs</td><td class="tv-compare__them">More standardized packages that lack Watchtower's power and technology</td></tr>
+					<tr><th scope="row">Company reputation</th><td class="tv-compare__us">Respected, 5/5-star-rated company</td><td class="tv-compare__them">Risky, low-rated on customer reviews</td></tr>
 				</tbody>
 			</table>
 		</div>

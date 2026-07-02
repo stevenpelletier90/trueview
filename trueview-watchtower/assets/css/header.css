@@ -33,10 +33,10 @@
 .tv-brand__logo {
   box-sizing: content-box;
   display: block;
-  height: 26px;
-  padding: 7px 11px;
+  height: 42px;
+  padding: 8px 13px;
   background: #fff;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 .tv-brand__divider {
@@ -103,5 +103,9 @@
   .tv-brand__divider,
   .tv-brand__tag {
     display: none !important;
+  }
+
+  .tv-brand__logo {
+    height: 34px;
   }
 }

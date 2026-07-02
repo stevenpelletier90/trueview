@@ -452,15 +452,21 @@
 
 .tv-compare__table {
   width: 100%;
-  min-width: 560px;
+  min-width: 640px;
   text-align: left;
   border-collapse: collapse;
 }
 
 .tv-compare__table th,
 .tv-compare__table td {
-  padding: 16px 20px;
+  padding: 15px 20px;
+  vertical-align: top;
   border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.tv-compare__table tbody td {
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .tv-compare__table thead th {
