@@ -65,7 +65,7 @@
 .tv-hero__img {
   display: block;
   width: 100%;
-  height: clamp(280px, 38vw, 440px);
+  height: clamp(360px, 46vw, 560px);
   object-fit: cover;
 }
 
@@ -274,13 +274,15 @@
 /* ---------- Coverage image band ---------- */
 .tv-coverage {
   position: relative;
+  min-height: clamp(360px, 48vw, 560px);
+  background: url("../coverage.jpg") center / cover no-repeat fixed;
 }
 
-.tv-coverage__img {
-  display: block;
-  width: 100%;
-  height: clamp(320px, 42vw, 520px);
-  object-fit: cover;
+/* iOS/Android mishandle fixed backgrounds — fall back to scroll on mobile. */
+@media (max-width: 760px) {
+  .tv-coverage {
+    background-attachment: scroll;
+  }
 }
 
 .tv-coverage__scrim {

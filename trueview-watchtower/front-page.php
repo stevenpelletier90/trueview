@@ -141,7 +141,6 @@ $trueview_contact = trueview_contact_url();
 </section>
 
 <section class="tv-coverage" id="coverage">
-	<img class="tv-coverage__img" src="<?php echo esc_url( trueview_asset( 'coverage.jpg' ) ); ?>" alt="True View Watchtower on an active job site">
 	<div class="tv-coverage__scrim"></div>
 	<div class="tv-coverage__overlay">
 		<div class="tv-coverage__inner">
