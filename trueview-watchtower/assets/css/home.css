@@ -177,23 +177,23 @@
 .tv-unit__inner {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(28px, 4vw, 56px);
+  gap: clamp(12px, 2vw, 32px);
   align-items: center;
   max-width: var(--tv-container);
   margin: 0 auto;
 }
 
 .tv-unit__media {
-  flex: 1 1 520px;
+  flex: 1.6 1 520px;
   min-width: 300px;
   padding-block: clamp(28px, 5vw, 60px);
   text-align: center;
-  background: radial-gradient(ellipse 60% 68% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
+  background: radial-gradient(ellipse 58% 68% at 50% 50%, rgb(255 255 255 / 18%) 0%, rgb(24 198 237 / 12%) 44%, transparent 72%);
 }
 
 .tv-unit__img {
   display: block;
-  width: min(100%, 720px);
+  width: min(100%, 900px);
   margin: 0 auto;
 }
 
@@ -229,7 +229,7 @@
 }
 
 .tv-unit__content {
-  flex: 1 1 380px;
+  flex: 1 1 340px;
   min-width: 300px;
 }
 
