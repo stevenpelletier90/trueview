@@ -138,7 +138,7 @@
 
 @media (max-width: 760px) {
   .tv-brand__logo {
-    height: 30px;
+    height: 28px;
   }
 
   .tv-header__inner {
@@ -146,15 +146,16 @@
   }
 
   /* Keep logo · phone · CTA on a single row — never let the phone icon and
-     the CTA stack onto two lines. The CTA swaps to its short "Contact" label
-     so the row fits narrow phones down to ~320px. */
+     the CTA stack onto two lines. The CTA swaps to its short "Free Quote"
+     label so the row fits narrow phones down to ~320px with the gutter
+     intact. */
   .tv-nav {
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 8px;
   }
 
   .tv-nav__cta {
-    padding: 10px 14px;
+    padding: 10px 12px;
     font-size: 13.5px;
   }
 
