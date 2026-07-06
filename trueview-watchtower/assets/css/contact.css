@@ -290,3 +290,19 @@
   font-weight: 600;
   color: var(--tv-green-dark);
 }
+
+/* ---------- Mobile ---------- */
+
+/* iOS Safari zooms the viewport when a focused control renders below 16px.
+   Force 16px on the Gravity Forms controls so focusing a field never triggers
+   a zoom. This is the accessible fix: we deliberately do NOT set
+   user-scalable=no / maximum-scale on the viewport meta, which would disable
+   pinch-zoom and fail WCAG 1.4.4 (Resize text). !important guarantees this
+   beats Gravity Forms' own field CSS regardless of its version/specificity. */
+@media (max-width: 760px) {
+  .tv-form--gravity input,
+  .tv-form--gravity select,
+  .tv-form--gravity textarea {
+    font-size: 16px !important;
+  }
+}

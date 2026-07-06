@@ -100,6 +100,12 @@
   box-shadow: 0 4px 12px rgb(8 166 207 / 28%);
 }
 
+/* CTA carries two labels: the full offer on desktop, a compact "Contact"
+   on phones so the header stays on one line (swapped in the 760px query). */
+.tv-nav__cta-short {
+  display: none;
+}
+
 /* Collapse the nav early — short homepage. Keep logo + phone icon + CTA. */
 @media (max-width: 1024px) {
   .tv-nav__link {
@@ -132,10 +138,31 @@
 
 @media (max-width: 760px) {
   .tv-brand__logo {
-    height: 34px;
+    height: 30px;
   }
 
-  .tv-nav {
+  .tv-header__inner {
     gap: 12px;
+  }
+
+  /* Keep logo · phone · CTA on a single row — never let the phone icon and
+     the CTA stack onto two lines. The CTA swaps to its short "Contact" label
+     so the row fits narrow phones down to ~320px. */
+  .tv-nav {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .tv-nav__cta {
+    padding: 10px 14px;
+    font-size: 13.5px;
+  }
+
+  .tv-nav__cta-full {
+    display: none;
+  }
+
+  .tv-nav__cta-short {
+    display: inline;
   }
 }

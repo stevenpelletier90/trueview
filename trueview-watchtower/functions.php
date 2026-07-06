@@ -95,3 +95,15 @@ function trueview_contact_url(): string {
 
 	return home_url( '/contact/' );
 }
+
+/**
+ * Keep the viewport still after the consultation form is submitted.
+ *
+ * The consultation form (ID 1, rendered by page-contact.php) submits over AJAX.
+ * By default Gravity Forms scrolls the window to the top of the form when the
+ * confirmation swaps in; returning false from gform_confirmation_anchor for
+ * that form disables the jump so the confirmation appears in place.
+ *
+ * @see https://docs.gravityforms.com/gform_confirmation_anchor/
+ */
+add_filter( 'gform_confirmation_anchor_1', '__return_false' );

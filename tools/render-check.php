@@ -17,6 +17,7 @@ $GLOBALS['THEME'] = $THEME;
 $GLOBALS['__is_front'] = true;
 
 function add_action( ...$a ) {}
+function add_filter( ...$a ) {}
 function add_theme_support( ...$a ) {}
 function is_front_page() { return $GLOBALS['__is_front']; }
 function language_attributes() { echo 'lang="en-US"'; }
@@ -70,9 +71,9 @@ $ok = check( 'home nav shows Locations', strpos( $home, '>Locations<' ) !== fals
 $ok = check( 'home anchors are same-page (#unit)', strpos( $home, 'href="#unit"' ) !== false ) && $ok;
 $ok = check( 'home nav uses CTA class', strpos( $home, 'tv-nav__cta' ) !== false ) && $ok;
 $ok = check( 'home has NO inline style= attributes', strpos( $home, 'style=' ) === false ) && $ok;
-$ok = check( 'hero img -> assets/tw-24.jpg', strpos( $home, '/assets/tw-24.jpg' ) !== false ) && $ok;
+$ok = check( 'hero img -> assets/hero.jpg', strpos( $home, '/assets/hero.jpg' ) !== false ) && $ok;
 $ok = check( 'unit img -> assets/unit.png', strpos( $home, '/assets/unit.png' ) !== false ) && $ok;
-$ok = check( 'coverage img -> assets/tw-28.jpg', strpos( $home, '/assets/tw-28.jpg' ) !== false ) && $ok;
+$ok = check( 'coverage section present (#coverage)', strpos( $home, 'id="coverage"' ) !== false ) && $ok;
 $ok = check( 'logo img -> assets/logo.png', strpos( $home, '/assets/logo.png' ) !== false ) && $ok;
 $ok = check( 'CTA buttons -> contact url', strpos( $home, 'href="http://localhost/contact/"' ) !== false ) && $ok;
 $ok = check( 'footer present', strpos( $home, 'All rights reserved' ) !== false ) && $ok;
@@ -85,8 +86,8 @@ $ok = check( 'contact nav shows Contact link', strpos( $contact, '>Contact<' ) !
 $ok = check( 'contact nav does NOT use the CTA class', strpos( $contact, 'tv-nav__cta' ) === false ) && $ok;
 $ok = check( 'contact has NO inline style= attributes', strpos( $contact, 'style=' ) === false ) && $ok;
 $ok = check( 'contact anchors point back to home', strpos( $contact, 'href="http://localhost/#unit"' ) !== false ) && $ok;
-$ok = check( 'form has name fields', strpos( $contact, 'name="email"' ) !== false && strpos( $contact, 'name="message"' ) !== false ) && $ok;
-$ok = check( 'submit button is inert (type=button)', strpos( $contact, 'type="button"' ) !== false ) && $ok;
+$ok = check( 'contact renders Gravity Forms wrapper', strpos( $contact, 'tv-form--gravity' ) !== false ) && $ok;
+$ok = check( 'contact shows graceful fallback when GF inactive', strpos( $contact, 'tv-form__note' ) !== false ) && $ok;
 $ok = check( 'no Fatal/Warning/Notice', strpos( $contact, 'Fatal error' ) === false && strpos( $contact, 'Warning:' ) === false && strpos( $contact, 'Notice:' ) === false ) && $ok;
 
 echo "\n" . ( $ok ? '==> ALL CHECKS PASSED' : '==> SOME CHECKS FAILED' ) . "\n";
