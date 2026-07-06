@@ -136,15 +136,6 @@ textarea:focus {
   color: var(--tv-cyan-bright);
 }
 
-.tv-eyebrow--accent::before {
-  display: block;
-  width: 34px;
-  height: 2px;
-  margin-bottom: 14px;
-  content: "";
-  background: var(--tv-cyan-bright);
-}
-
 .tv-h2 {
   margin: 0;
   font-family: var(--tv-font-display);

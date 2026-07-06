@@ -91,7 +91,7 @@ $trueview_contact = trueview_contact_url();
 <section class="tv-section tv-section--dark tv-compare" id="compare">
 	<div class="tv-container">
 		<div class="tv-compare__head">
-			<div class="tv-eyebrow tv-eyebrow--bright tv-eyebrow--accent">The Difference</div>
+			<div class="tv-eyebrow tv-eyebrow--bright">The Difference</div>
 			<h2 class="tv-h2 tv-compare__title">True View Watchtower vs. the competition.</h2>
 			<p class="tv-compare__lead">See how a fully-equipped Watchtower unit stacks up against the standard competitor package &mdash; feature for feature.</p>
 		</div>

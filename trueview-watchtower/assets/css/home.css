@@ -214,16 +214,21 @@
   min-width: 0;
 }
 
-/* Two columns from tablet up — let the showcase go wide and the image go large. */
+/* Two balanced columns from tablet up — the image and the copy get equal room
+   and sit close together so the text isn't squeezed into a narrow rail. */
 @media (min-width: 900px) {
   .tv-unit__inner {
-    grid-template-columns: 1.5fr 1fr;
-    gap: clamp(24px, 3vw, 56px);
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 2vw, 40px);
     max-width: var(--tv-container);
   }
 
+  .tv-unit__media {
+    padding-block: clamp(16px, 2.5vw, 36px);
+  }
+
   .tv-unit__img {
-    width: min(100%, 1040px);
+    width: min(100%, 620px);
   }
 }
 
@@ -350,6 +355,7 @@
   font-weight: 700;
   line-height: 1;
   color: var(--tv-cyan);
+  white-space: nowrap;
 }
 
 .tv-stats__label {
@@ -464,6 +470,12 @@
 }
 
 /* ---------- Comparison — Watchtower vs. traditional ---------- */
+
+/* Full-width hairline that reads as a section divider into "The Difference". */
+.tv-compare {
+  border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
 .tv-compare__head {
   max-width: 680px;
   margin-bottom: clamp(28px, 4vw, 44px);
@@ -628,9 +640,4 @@
 
 .tv-stats--dark .tv-stats__label {
   color: var(--tv-on-navy);
-}
-
-.tv-stats__num--word {
-  font-size: clamp(20px, 2.4vw, 30px);
-  letter-spacing: -0.01em;
 }
