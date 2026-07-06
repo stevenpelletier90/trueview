@@ -12,20 +12,23 @@
   backdrop-filter: blur(10px);
 }
 
+/* max-width carries the gutter inside the cap so the header's content edges
+   line up exactly with .tv-container sections (which put the gutter on the
+   outer section, outside the cap). Both resolve to (100vw - container) / 2. */
 .tv-header__inner {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--tv-container);
-  padding: 14px var(--tv-gutter);
+  max-width: calc(var(--tv-container) + 2 * var(--tv-gutter));
+  padding: 15px var(--tv-gutter);
   margin: 0 auto;
 }
 
 .tv-brand {
   display: flex;
   flex: none;
-  gap: 11px;
+  gap: 15px;
   align-items: center;
   text-decoration: none;
 }
@@ -33,23 +36,24 @@
 .tv-brand__logo {
   box-sizing: content-box;
   display: block;
-  height: 42px;
-  padding: 8px 13px;
+  height: 48px;
+  padding: 9px 15px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .tv-brand__divider {
   width: 1px;
-  height: 22px;
-  background: rgb(255 255 255 / 18%);
+  height: 30px;
+  background: rgb(255 255 255 / 20%);
 }
 
 .tv-brand__tag {
   font-family: var(--tv-font-mono);
-  font-size: 9.5px;
-  color: var(--tv-on-navy);
-  letter-spacing: 0.24em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tv-on-navy-soft);
+  letter-spacing: 0.26em;
   white-space: nowrap;
 }
 
@@ -62,10 +66,15 @@
 }
 
 .tv-nav__link {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--tv-on-navy-soft);
   text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.tv-nav__link:hover {
+  color: #fff;
 }
 
 .tv-nav__link--active {
@@ -75,32 +84,58 @@
 
 .tv-nav__phone {
   display: inline-flex;
+  gap: 8px;
   align-items: center;
   font-family: var(--tv-font-display);
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   white-space: nowrap;
   text-decoration: none;
+  transition: color 0.18s ease;
 }
 
+.tv-nav__phone:hover {
+  color: var(--tv-cyan-bright);
+}
+
+/* Small glyph rides next to the number on desktop; on tablet/phone the number
+   drops away and this becomes the whole tap target (see the 1024px query). */
 .tv-nav__phone-icon {
-  display: none;
+  display: block;
 }
 
 .tv-nav__cta {
-  padding: 11px 18px;
-  font-size: 14px;
+  padding: 12px 20px;
+  font-size: 14.5px;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
   text-decoration: none;
   background: var(--tv-cyan);
-  border-radius: 8px;
+  border-radius: 9px;
   box-shadow: 0 4px 12px rgb(8 166 207 / 28%);
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-/* CTA carries two labels: the full offer on desktop, a compact "Contact"
+.tv-nav__cta:hover {
+  background: var(--tv-cyan-bright);
+  box-shadow: 0 6px 18px rgb(8 166 207 / 42%);
+}
+
+/* Visible keyboard focus for every header control (a11y floor). */
+.tv-brand:focus-visible,
+.tv-nav__link:focus-visible,
+.tv-nav__phone:focus-visible,
+.tv-nav__cta:focus-visible {
+  outline: 2px solid var(--tv-cyan-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* CTA carries two labels: the full offer on desktop, a compact "Free Quote"
    on phones so the header stays on one line (swapped in the 760px query). */
 .tv-nav__cta-short {
   display: none;
@@ -121,10 +156,7 @@
     display: none;
   }
 
-  .tv-nav__phone-icon {
-    display: block;
-  }
-
+  /* Number drops away; the glyph (shown by default) becomes the tap target. */
   .tv-nav__phone {
     justify-content: center;
     width: 42px;

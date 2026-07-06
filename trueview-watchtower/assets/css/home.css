@@ -180,6 +180,14 @@
   color: var(--tv-ink-500);
 }
 
+/* Six value props read as a balanced 3 × 2 on desktop — without this the wider
+   container fits four across and orphans the last two cards on their own row. */
+@media (min-width: 980px) {
+  .tv-why__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* ---------- Product showcase ---------- */
 .tv-unit__inner {
   display: grid;
@@ -284,9 +292,11 @@
   align-items: center;
 }
 
+/* Gutter sits inside the cap (like the header) so the overlay text lines up
+   with the .tv-container sections above and below it. */
 .tv-coverage__inner {
   width: 100%;
-  max-width: var(--tv-container);
+  max-width: calc(var(--tv-container) + 2 * var(--tv-gutter));
   padding: 0 var(--tv-gutter);
   margin: 0 auto;
 }

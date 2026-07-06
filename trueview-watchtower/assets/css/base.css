@@ -47,7 +47,7 @@
   --tv-font-mono: "IBM Plex Mono", monospace;
 
   /* Layout */
-  --tv-container: 1200px;
+  --tv-container: 1440px;
   --tv-gutter: clamp(18px, 4vw, 48px);
 }
 
