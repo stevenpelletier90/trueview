@@ -19,3 +19,6 @@ True View Watchtower - Concepts (standalone).html
 
 # Logs
 *.log
+
+# Playwright MCP page snapshots (transient dev artifacts)
+.playwright-mcp/

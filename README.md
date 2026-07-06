@@ -1,8 +1,9 @@
 # True View Watchtower — WordPress theme
 
 A simple two-page brochure theme for **True View Security Solutions** (solar-powered,
-Starlink-connected mobile surveillance units serving NY & PA). Built from design
-**Concept A · Clarity** — light, airy, trust-first.
+Starlink-connected mobile surveillance units serving the Northeast & New England,
+available nationwide). Built from design **Concept B · Command** — dark, navy,
+image-led, high-contrast.
 
 The theme itself lives in [`trueview-watchtower/`](trueview-watchtower/) — that's the
 folder you install into WordPress. The linting/PHP tooling sits at the repo root.
@@ -101,6 +102,6 @@ markdownlint) against staged files.
 
 ## Other concepts
 
-The source design also includes Concept **B · Command** (bold/navy/image-led) and
-**C · Monitor** (tech/surveillance/live). This theme implements **A · Clarity**.
-Switching to B or C would mean re-deriving the templates from those pages.
+The source design also includes Concept **A · Clarity** (light/airy/trust-first) and
+**C · Monitor** (tech/surveillance/live). This theme implements **B · Command**.
+Switching to A or C would mean re-deriving the templates from those pages.

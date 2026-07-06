@@ -42,5 +42,8 @@ tmp/
 _preview*.html
 _preview_render.php
 
+# Playwright MCP page snapshots (transient dev artifacts)
+.playwright-mcp/
+
 # Build artifacts (theme zip for upload)
 *.zip
