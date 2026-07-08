@@ -92,9 +92,9 @@ template's structure means reading the relevant concept in that file.
 ## Not part of the theme
 
 - `trueview-watchtower.zip` — build artifact (gitignored); the theme folder zipped for upload.
-- `trueview-mcp.php` — **untracked**, unrelated to the theme. It's a WordPress MCP-abilities
-  plugin, hand-deployed to `mu-plugins`; not linted, not part of the theme build. Don't fold it
-  into theme changes.
+- `trueview-mcp.php` — tracked at repo root but unrelated to the theme. It's a WordPress
+  MCP-abilities plugin, hand-deployed to `mu-plugins`; not linted, not part of the theme
+  build. Don't fold it into theme changes.
 - Brand images (`logo.png`, `unit.png`, `tw-24.jpg`, `tw-28.jpg`, `coverage.jpg`, `hero.jpg`)
   are large binaries the design connector couldn't auto-bundle (256 KiB cap) — dropped in by
   hand; see `assets/_IMAGES-README.txt`.
