@@ -47,3 +47,7 @@ _preview_render.php
 
 # Build artifacts (theme zip for upload)
 *.zip
+
+# Claude Code — personal overrides stay local; settings.json + hooks are shared
+.claude/settings.local.json
+.claude/*.local.md
