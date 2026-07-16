@@ -39,10 +39,9 @@ filenames — it stubs WordPress, executes the templates, and fails the build if
 emits `style=`, a broken asset path, or a PHP warning. There is no PHPUnit suite; this
 harness is the test.
 
-A Husky `pre-commit` hook runs lint-staged over staged files only (phpcbf → phpcs,
-stylelint, prettier, markdownlint). `scripts/phpcbf-staged.js` exists because phpcbf
-exits 1 when it _successfully_ fixes something — it remaps 0/1 to success so a clean
-auto-fix doesn't abort the commit.
+There are no git hooks and no Claude Code hooks in this repo (removed 2026-07-16,
+pending a rebuild) — nothing auto-fixes or gates a commit. Run `npm run validate`
+yourself before pushing, and `npm run lint:php:fix` / `lint:css:fix` to auto-fix.
 
 ## Architecture
 

@@ -7,9 +7,6 @@ vendor/
 .stylelintcache
 .eslintcache
 
-# Husky internals (regenerated on install)
-.husky/_/
-
 # Environment
 .env
 .env.local

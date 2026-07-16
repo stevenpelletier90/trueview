@@ -81,7 +81,7 @@ Requires PHP 8+, Composer, and Node 24+.
 
 ```sh
 composer install   # PHPCS + WordPress Coding Standards + PHPStan
-npm install        # ESLint, Prettier, Stylelint, markdownlint, Husky hooks
+npm install        # ESLint, Prettier, Stylelint, markdownlint
 ```
 
 Common commands:
@@ -97,8 +97,8 @@ npm run format            # Prettier --write
 php tools/render-check.php # render templates headless; assert structure + zero inline styles
 ```
 
-A Husky `pre-commit` hook runs **lint-staged** (phpcbf + phpcs, stylelint, prettier,
-markdownlint) against staged files.
+There are no git hooks — nothing runs automatically at commit time. Run
+`npm run validate` yourself before pushing.
 
 ## Other concepts
 
