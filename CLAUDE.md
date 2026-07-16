@@ -39,9 +39,14 @@ filenames — it stubs WordPress, executes the templates, and fails the build if
 emits `style=`, a broken asset path, or a PHP warning. There is no PHPUnit suite; this
 harness is the test.
 
-There are no git hooks and no Claude Code hooks in this repo (removed 2026-07-16,
-pending a rebuild) — nothing auto-fixes or gates a commit. Run `npm run validate`
-yourself before pushing, and `npm run lint:php:fix` / `lint:css:fix` to auto-fix.
+There are no git hooks — nothing gates a commit or push. Run `npm run validate`
+yourself before pushing (`npm run lint:php:fix` / `lint:css:fix` to auto-fix).
+
+One Claude Code hook runs: a PostToolUse formatter (`scripts/claude-format-hook.js`,
+wired in `.claude/settings.json`) that auto-fixes files Claude edits — stylelint/eslint/
+phpcbf/markdownlint + prettier by extension. Files Claude edits never pass through an
+editor, so format-on-save can't catch them; this does. It always exits 0 and never
+blocks. It formats only — `validate` is still the real check.
 
 ## Architecture
 
