@@ -36,5 +36,8 @@
     "format:check": "npx prettier --check .",
     "phpstan": "php vendor/bin/phpstan analyse --memory-limit=4G",
     "validate": "concurrently --names css,js,php,syntax,stan,fmt,md,norm \"npm run lint:css\" \"npm run lint:js\" \"npm run lint:php\" \"npm run lint:php:syntax\" \"npm run phpstan\" \"npm run format:check\" \"npm run lint:md\" \"npm run normalize:check\""
+  },
+  "overrides": {
+    "shell-quote": "^1.8.5"
   }
 }
