@@ -48,13 +48,11 @@ phpcbf/markdownlint + prettier by extension. Files Claude edits never pass throu
 editor, so format-on-save can't catch them; this does. It always exits 0 and never
 blocks. It formats only — `validate` is still the real check.
 
-**Navigating the code.** Intelephense is installed globally, so the harness `LSP` tool
-works here too (`goToDefinition` / `findReferences` / `workspaceSymbol` for the
+**Navigating the code.** The harness `LSP` tool works here (`goToDefinition` / `findReferences` / `workspaceSymbol` for the
 `trueview*` functions and hooks). The theme is only ~10 PHP files, though, so grep is
 usually just as quick — reach for `LSP` mainly to trace a shared helper (e.g.
-`trueview_contact_url()`) across templates. If it reports the server "not found or in an
-unsafe location", node was upgraded via fnm; fix per `~/.claude/skills/php-lsp-win/.lsp.json`
-(reinstall `intelephense -g`, update the pinned paths).
+`trueview_contact_url()`) across templates. PHP LSP is the user-level `php-lsp-win` skill;
+if it stops resolving, check that fnm's default alias still points at a `node.exe`.
 
 ## Architecture
 
