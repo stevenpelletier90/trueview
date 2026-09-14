@@ -2,7 +2,8 @@
 
 - **Date:** 2026-07-01
 - **Status:** Implemented
-- **Direction:** Concept B "Command" (dark navy, image-led) applied site-wide, with deliberate white elements for contrast so the page is not monotone.
+- **Direction:** Concept B "Command" (dark navy, image-led) applied site-wide, with deliberate white
+  elements for contrast so the page is not monotone.
 
 ## Client feedback driving this
 
@@ -45,7 +46,9 @@ White objects on the dark base so the important content stands out:
 
 ## New section — comparison chart
 
-"True View Watchtower vs. traditional security", placed after Why, before The Unit. Semantic table with 6 rows (setup time, off-grid, 24/7 monitoring, relocatable, radar + multi-camera, NDAA). Yes/No conveyed by text plus a decorative check — never color or icon alone.
+"True View Watchtower vs. traditional security", placed after Why, before The Unit. Semantic table
+with 6 rows (setup time, off-grid, 24/7 monitoring, relocatable, radar + multi-camera, NDAA). Yes/No
+conveyed by text plus a decorative check — never color or icon alone.
 
 ## Files changed
 

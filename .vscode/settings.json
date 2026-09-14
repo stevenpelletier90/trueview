@@ -1,0 +1,21 @@
+{
+  // Project VS Code settings. Personal preferences (theme, font, rulers,
+  // format-on-save) live in user settings; only what this repo needs is here.
+
+  // Stylelint owns CSS (npm run lint:css). The built-in validator would
+  // report the same problems a second time.
+  "css.validate": false,
+  "stylelint.validate": ["css"],
+
+  // PHP: phpcbf (WordPress Coding Standards) is the formatter. Not run on
+  // save, to avoid surprise rewrites; run `npm run lint:php:fix`.
+  "[php]": {
+    "editor.defaultFormatter": "valeryanm.vscode-phpsab",
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.markdownlint": "explicit"
+  }
+}
