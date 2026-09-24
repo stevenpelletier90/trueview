@@ -90,6 +90,12 @@ The design was derived from **`True View Watchtower - Concepts (standalone).html
 standalone mockup holding all three concepts A/B/C). It's the design of record — re-deriving a
 template's structure means reading the relevant concept in that file.
 
+That file was exported from the Claude Design project "Website design for two pages" (projectId
+`a9221f29-9d49-4135-82e8-50c4f262743a`, reachable through the DesignSync tool): overview
+`True View Watchtower - Concepts.dc.html`, pages `Watchtower {A,B,C} - {Home,Contact}.dc.html`. The
+`.dc.html` format wraps markup in `<x-dc><helmet>…</helmet>…</x-dc>` plus a `support.js` script.
+Strip the wrapper; the usable HTML/CSS is inside.
+
 ## Two render harnesses (don't confuse them)
 
 - `tools/render-check.php` — **tracked, CI-style assertions.** Stubs WP, renders Home + Contact,
@@ -103,7 +109,11 @@ template's structure means reading the relevant concept in that file.
 - `trueview-watchtower.zip` — build artifact (gitignored); the theme folder zipped for upload.
 - `trueview-mcp.php` — tracked at repo root but unrelated to the theme. It's a WordPress
   MCP-abilities plugin, hand-deployed to `mu-plugins`; not linted, not part of the theme build.
-  Don't fold it into theme changes.
+  Don't fold it into theme changes. Only this one file may sit in `mu-plugins` (its header names the
+  older files that would double-register). After a deploy, reconnect the `trueview-wp` MCP so it
+  re-discovers abilities. The MCP talks to the live install: `delete-media` is permanent (no
+  `MEDIA_TRASH`). Check edits with `php -l trueview-mcp.php` only; `phpcbf` would reformat the
+  file's compact style.
 - Brand images (`logo.png`, `unit.png`, `tw-24.jpg`, `tw-28.jpg`, `coverage.jpg`, `hero.jpg`) are
   large binaries the design connector couldn't auto-bundle (256 KiB cap) — dropped in by hand; see
   `assets/_IMAGES-README.txt`.
