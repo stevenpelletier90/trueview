@@ -42,8 +42,8 @@ broken asset path, or a PHP warning. There is no PHPUnit suite; this harness is 
 There are no git hooks — nothing gates a commit or push. Run `npm run validate` yourself before
 pushing (`npm run lint:php:fix` / `lint:css:fix` to auto-fix).
 
-One Claude Code hook runs: a PostToolUse formatter (`scripts/claude-format-hook.js`, wired in
-`.claude/settings.json`) that auto-fixes files Claude edits — stylelint/eslint/
+This repo defines one Claude Code hook: a PostToolUse formatter (`scripts/claude-format-hook.js`,
+wired in `.claude/settings.json`) that auto-fixes files Claude edits — stylelint/eslint/
 phpcbf/markdownlint + prettier by extension. Files Claude edits never pass through an editor, so
 format-on-save can't catch them; this does. It always exits 0 and never blocks. It formats only —
 `validate` is still the real check.
