@@ -42,11 +42,11 @@ broken asset path, or a PHP warning. There is no PHPUnit suite; this harness is 
 There are no git hooks — nothing gates a commit or push. Run `npm run validate` yourself before
 pushing (`npm run lint:php:fix` / `lint:css:fix` to auto-fix).
 
-This repo defines one Claude Code hook: a PostToolUse formatter (`scripts/claude-format-hook.js`,
-wired in `.claude/settings.json`) that auto-fixes files Claude edits — stylelint/eslint/
-phpcbf/markdownlint + prettier by extension. Files Claude edits never pass through an editor, so
-format-on-save can't catch them; this does. It always exits 0 and never blocks. It formats only —
-`validate` is still the real check.
+This repo defines no Claude Code hook. Files Claude edits are auto-fixed by the user-level
+PostToolUse hook (`~/.claude/hooks/format-on-edit.mjs`, shared by every repo), which runs the fixers
+this repo has installed — stylelint/eslint/phpcbf/markdownlint + prettier by extension. Files Claude
+edits never pass through an editor, so format-on-save can't catch them; this does. It always exits 0
+and never blocks. It formats only — `validate` is still the real check.
 
 **Navigating the code.** The harness `LSP` tool works here (`goToDefinition` / `findReferences` /
 `workspaceSymbol` for the `trueview*` functions and hooks). The theme is only ~10 PHP files, though,

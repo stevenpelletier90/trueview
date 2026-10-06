@@ -10,7 +10,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "concurrently": "^10.0.5",
-    "eslint": "^10.11.0",
+    "eslint": "^10.12.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.13.0",
     "markdownlint-cli2": "^0.23.3",
@@ -23,8 +23,8 @@
     "lint": "npm run lint:css && npm run lint:js && npm run lint:php && npm run lint:md",
     "lint:css": "npx stylelint \"trueview-watchtower/**/*.css\"",
     "lint:css:fix": "npx stylelint \"trueview-watchtower/**/*.css\" --fix",
-    "lint:js": "npx eslint --no-error-on-unmatched-pattern \"trueview-watchtower/**/*.js\"",
-    "lint:js:fix": "npx eslint --no-error-on-unmatched-pattern \"trueview-watchtower/**/*.js\" --fix",
+    "lint:js": "npx eslint --no-error-on-unmatched-pattern \"*.config.js\" \"trueview-watchtower/**/*.js\"",
+    "lint:js:fix": "npx eslint --no-error-on-unmatched-pattern \"*.config.js\" \"trueview-watchtower/**/*.js\" --fix",
     "lint:php": "php vendor/bin/phpcs",
     "lint:php:fix": "php vendor/bin/phpcbf",
     "lint:php:syntax": "composer lint:syntax",
@@ -38,6 +38,8 @@
     "validate": "concurrently --names css,js,php,syntax,stan,fmt,md,norm \"npm run lint:css\" \"npm run lint:js\" \"npm run lint:php\" \"npm run lint:php:syntax\" \"npm run phpstan\" \"npm run format:check\" \"npm run lint:md\" \"npm run normalize:check\""
   },
   "overrides": {
-    "shell-quote": "^1.8.5"
+    "katex": "^0.19.0",
+    "shell-quote": "^1.8.5",
+    "smol-toml": "^1.9.0"
   }
 }
