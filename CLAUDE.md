@@ -16,14 +16,17 @@ The repo is **two things stacked in one folder**:
 - **repo root** — dev tooling (lint/static-analysis/format configs, render harnesses, Composer/npm).
   None of it ships.
 
-This split drives everything: the phpcs ruleset, every npm lint glob, and Prettier all target
-`trueview-watchtower/**` only. When adding theme code, put it under `trueview-watchtower/`; when
-adding tooling, keep it at root and exclude it from the theme scope (see `phpcs.xml`'s `tools/`
-exclusion for the pattern).
+This split drives the PHP and CSS checks: the phpcs ruleset, PHPStan and `lint:css` target
+`trueview-watchtower/**` only. The rest reach past it: `lint:js` also lints the root `*.config.js`,
+markdownlint globs `**/*.md`, and `format` is `prettier --write .` (the whole repo minus
+`.prettierignore`). When adding theme code, put it under `trueview-watchtower/`; when adding
+tooling, keep it at root and exclude it from the theme scope (see `phpcs.xml`'s `tools/` exclusion
+for the pattern).
 
 ## Commands
 
-Requires PHP 8+, Composer, Node 24+ (`.nvmrc`). Install: `composer install && npm install`.
+Requires PHP 8+, Composer, Node 24+ (`package.json` `engines`). Install:
+`composer install && npm install`.
 
 ```sh
 npm run validate            # ALL checks concurrently: css, js, php(cs), php syntax, phpstan, prettier, md, composer-normalize
@@ -42,17 +45,11 @@ broken asset path, or a PHP warning. There is no PHPUnit suite; this harness is 
 There are no git hooks — nothing gates a commit or push. Run `npm run validate` yourself before
 pushing (`npm run lint:php:fix` / `lint:css:fix` to auto-fix).
 
-This repo defines no Claude Code hook. Files Claude edits are auto-fixed by the user-level
-PostToolUse hook (`~/.claude/hooks/format-on-edit.mjs`, shared by every repo), which runs the fixers
-this repo has installed — stylelint/eslint/phpcbf/markdownlint + prettier by extension. Files Claude
-edits never pass through an editor, so format-on-save can't catch them; this does. It always exits 0
-and never blocks. It formats only — `validate` is still the real check.
+This repo defines no Claude Code hook.
 
 **Navigating the code.** The harness `LSP` tool works here (`goToDefinition` / `findReferences` /
-`workspaceSymbol` for the `trueview*` functions and hooks). The theme is only ~10 PHP files, though,
-so grep is usually just as quick — reach for `LSP` mainly to trace a shared helper (e.g.
-`trueview_contact_url()`) across templates. PHP LSP is the user-level `php-lsp-win` skill; if it
-stops resolving, check that fnm's default alias still points at a `node.exe`.
+`workspaceSymbol` for the `trueview*` functions and hooks). The theme is a handful of PHP files;
+reach for `LSP` to trace a shared helper (e.g. `trueview_contact_url()`) across templates.
 
 ## Architecture
 
@@ -90,8 +87,7 @@ The design was derived from **`True View Watchtower - Concepts (standalone).html
 standalone mockup holding all three concepts A/B/C). It's the design of record — re-deriving a
 template's structure means reading the relevant concept in that file.
 
-That file was exported from the Claude Design project "Website design for two pages" (projectId
-`a9221f29-9d49-4135-82e8-50c4f262743a`, reachable through the DesignSync tool): overview
+That file was exported from the Claude Design project "Website design for two pages": overview
 `True View Watchtower - Concepts.dc.html`, pages `Watchtower {A,B,C} - {Home,Contact}.dc.html`. The
 `.dc.html` format wraps markup in `<x-dc><helmet>…</helmet>…</x-dc>` plus a `support.js` script.
 Strip the wrapper; the usable HTML/CSS is inside.
