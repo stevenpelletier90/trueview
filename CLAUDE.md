@@ -1,8 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this
-repository.
-
 ## What this repo is
 
 A classic (non-block) WordPress **brochure theme** — two pages, Home + Contact — for True View
